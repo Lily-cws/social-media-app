@@ -4,7 +4,7 @@ import { Modal } from '@mui/material';
 import { useSelector, useDispatch } from 'react-redux';
 import { AppDispatch, RootState } from '@/redux/store';
 import { openSignUpModal, closeSignUpModal } from '@/redux/slices/modalSlice';
-import { signInUser, signOutUser } from '@/redux/slices/userSlice';
+import { signInUser } from '@/redux/slices/userSlice';
 import { EyeIcon, EyeSlashIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from '@/firebase';
@@ -65,8 +65,8 @@ export default function SignUpModal() {
 
       })
 
-      return unsubscribe;
-    },[])
+      return unsubscribe; // explicit cleanup
+    },[dispatch])
 
   return (
     <>

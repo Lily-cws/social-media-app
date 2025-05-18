@@ -41,15 +41,12 @@ export default function Post({data, id}:PostProps) {
                 likes: arrayRemove(user.uid),
             });
 
-            console.log("unlike", id);
         }else{
             await updateDoc(postRef,{
                 likes: arrayUnion(user.uid),
             });
 
-            console.log("like", id);
         }
-        console.log("LikePostClick()");
     }
 
 

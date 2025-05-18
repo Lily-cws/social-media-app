@@ -24,7 +24,7 @@ export default function PostFeed() {
 
     return unsubscribe;
 
-  },[])
+  },[dispatch])
 
 //console.log(posts);
 
