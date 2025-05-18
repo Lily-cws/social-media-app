@@ -6,6 +6,7 @@ import { DocumentData,collection, onSnapshot, orderBy, query, QueryDocumentSnaps
 import { db } from '@/firebase';
 import { useDispatch } from 'react-redux';
 import { closeLoadingScreen } from '@/redux/slices/loadingSlice';
+import HpLogOutButton from './HpLogOutButton';
 
 export default function PostFeed() {
   const [posts, setPosts] = useState<QueryDocumentSnapshot<DocumentData, DocumentData>[]>([]);
@@ -31,8 +32,11 @@ export default function PostFeed() {
   return (
     <div className="flex-grow max-w-2xl border-x border-gray-100">
         <div className="py-4 px-3 text-lg sm:text-xl sticky top-0 z-50
-        bg-white bg-opacity-80 backdrop-blur-sm font-bold border-b border-gray-100">
-            Home
+        bg-white bg-opacity-80 backdrop-blur-sm font-bold border-b border-gray-100
+         flex justify-between items-center
+        ">
+            <span>Home</span>
+            <span className="sm:hidden"><HpLogOutButton /></span>
         </div>
         <PostInput />
 

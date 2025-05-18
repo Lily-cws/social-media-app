@@ -14,6 +14,7 @@ ArrowUpTrayIcon
  } from '@heroicons/react/24/outline';
 import { PostHeader } from '@/components/Post'
 import { Avatar } from '@mui/material'
+import HpLogOutButton from '@/components/HpLogOutButton'
 
 const fetchPost = async (id : string) =>{
     const postRef = doc(db,"posts",id);
@@ -48,11 +49,14 @@ export default async function page({params}: PageProps) {
 <div className="flex-grow max-w-2xl border-x border-gray-100">
         <div className="py-4 px-3 text-lg sm:text-xl sticky top-0 z-50
         bg-white bg-opacity-80 backdrop-blur-sm font-bold border-b border-gray-100
-        flex items-center">
-            <Link href="/" >
-                <ArrowLeftIcon className="w-5 h-5 mr-10" />
-            </Link>
-            Bumble
+        flex items-center justify-between">
+            <div className="flex items-center">
+                <Link href="/" >
+                    <ArrowLeftIcon className="w-5 h-5 mr-10" />
+                </Link>
+                Bumble
+            </div>
+            <span className="sm:hidden"><HpLogOutButton /></span>
         </div>
 
         <div className="flex flex-col p-3 space-y-5 border-b border-gray-100">
