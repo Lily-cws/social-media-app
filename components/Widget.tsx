@@ -21,7 +21,7 @@ export default function Widget() {
 
       {/* Trending */}
       <div className="bg-myBgGray p-3 rounded-xl">
-        <h1 className="text-xl font-bold mb-2">What's Happening?</h1>
+        <h1 className="text-xl font-bold mb-2">What&apos;s Happening?</h1>
 
         {/* --Trending 1 */}
         <div className="flex flex-col py-3 text-sm cursor-pointer">

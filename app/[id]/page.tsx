@@ -92,8 +92,9 @@ export default async function page({params}: PageProps) {
 
         {/* List of Comments*/}
         {
-            post?.comments.map((comment:Comment) =>(
+            post?.comments.map((comment:Comment, index: number) =>(
                  <Comments
+                    key={index}
                     name={comment.name}
                     username={comment.username}
                     text={comment.text}
