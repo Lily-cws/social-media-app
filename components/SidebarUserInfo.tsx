@@ -1,7 +1,7 @@
 
 "use client"
 import React, {useState} from 'react';
-import Image from 'next/image';
+import { Avatar } from '@mui/material';
 import { signOut } from 'firebase/auth';
 import { auth } from '@/firebase';
 import { useDispatch, useSelector } from 'react-redux';
@@ -34,13 +34,16 @@ async function handleSignOut() {
         w-fit xl:w-full"
         onClick={()=> setIsClick(!isClick)}>
         <div className="flex items-center w-full">
-            <Image
-                src={'/assets/Profile_Pic.png'}
-                width={36}
-                height={36}
-                alt="Profile Pic"
-                className="w-[36px] h-[36px] rounded-full"
-                />
+            <Avatar
+                sx={{
+                    width: 36,
+                    height: 36,
+                    backgroundColor: "gray" 
+                }}
+                alt={user.name}
+            >
+                {user.name?.charAt(0).toUpperCase()}
+            </Avatar>
             <div className="hidden xl:flex flex-col text-sm ms-2 w-[75%]">
                 <span className="font-bold block whitespace-nowrap text-ellipsis overflow-hidden">{user.name}</span>
                 <span className="text-gray-500 block whitespace-nowrap text-ellipsis overflow-hidden">@{user.username}</span>

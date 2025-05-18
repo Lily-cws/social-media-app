@@ -14,6 +14,7 @@ import { addDoc, arrayUnion, collection, doc, serverTimestamp, updateDoc } from 
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import { closeCommentModal,openLogInModal } from '@/redux/slices/modalSlice';
+import { Avatar } from "@mui/material";
 
 
 
@@ -62,15 +63,31 @@ export default function PostInput({isModalOpen}:PostInputProps) {
 
   return (
     <div className="flex space-x-5 p-3 border-b border-gray-100">
-      <Image
-        src={isModalOpen? '/assets/Profile_Pic.png':'/assets/Honey_Bee.png'} 
-        width={44}
-        height={44}
-        alt={isModalOpen? "Profile Picture":"Logo"}
-        unoptimized
-        className="w-[44px] h-[44px]"
-        priority
-      />
+
+      {
+        !isModalOpen ? (
+          <Image
+            src={'/assets/Honey_Bee.png'} 
+            width={44}
+            height={44}
+            alt="Logo"
+            unoptimized
+            className="w-[44px] h-[44px]"
+            priority
+          />
+        ) : (
+          <Avatar
+            sx={{
+                width: 36,
+                height: 36,
+                backgroundColor: "gray" 
+            }}
+            alt={user.name}
+        >
+            {user.name?.charAt(0).toUpperCase()}
+          </Avatar>
+        )
+      }
       <div className="w-full">
         <textarea className="w-full resize-none outline-none
         min-h-[50px] text-lg"

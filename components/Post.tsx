@@ -5,7 +5,7 @@ ChartBarIcon,
 ArrowUpTrayIcon
  } from '@heroicons/react/24/outline';
 import { HeartIcon as HeartSolidIcon } from '@heroicons/react/24/solid';
-import Image from 'next/image';
+import { Avatar } from '@mui/material';
 import { arrayRemove, arrayUnion, doc, DocumentData, Timestamp, updateDoc } from 'firebase/firestore';
 import Moment from 'react-moment';
 import { useSelector, useDispatch } from 'react-redux'
@@ -136,13 +136,16 @@ interface PostheaderProps{
 export function PostHeader({username, name, timestamp, text, replyTo}:PostheaderProps) {
     return(
         <div className="flex space-x-5 p-3">
-            <Image
-            src={'/assets/Profile_Pic.png'}
-            width={44}
-            height={44}
-            alt="Profile"
-            className="w-[44px] h-[44px]"
-             />
+            <Avatar
+                sx={{
+                    width: 44,
+                    height: 44,
+                    backgroundColor: 'gray',
+                }}
+                alt={name}
+            >
+                {name?.charAt(0).toUpperCase()}
+            </Avatar>
              <div className="text-[15px] flex flex-col space-y-1.5">
                 <div className="flex space-x-1.5 text-[#707E89]">
                     <span className="font-bold text-[#0F1419] 

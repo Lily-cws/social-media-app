@@ -7,13 +7,13 @@ import { getDoc, doc } from 'firebase/firestore';
 import { db } from '@/firebase';
 import { ArrowLeftIcon, EllipsisHorizontalIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
-import Image from 'next/image'
 import { ChatBubbleOvalLeftEllipsisIcon,
 HeartIcon,
 ChartBarIcon,
 ArrowUpTrayIcon
  } from '@heroicons/react/24/outline';
 import { PostHeader } from '@/components/Post'
+import { Avatar } from '@mui/material'
 
 const fetchPost = async (id : string) =>{
     const postRef = doc(db,"posts",id);
@@ -58,13 +58,16 @@ export default async function page({params}: PageProps) {
         <div className="flex flex-col p-3 space-y-5 border-b border-gray-100">
             <div className="flex justify-between items-center mb-1.5">
                 <div className="flex space-x-3">
-                    <Image
-                        src={'/assets/Profile_Pic.png'}
-                        width={44}
-                        height={44}
-                        alt="Profile"
-                        className="w-[44px] h-[44px]"
-                        />
+                     <Avatar
+                        sx={{
+                            width: 44,
+                            height: 44,
+                            backgroundColor: "gray" 
+                        }}
+                        alt={post?.name}
+                    >
+                        {post?.name?.charAt(0).toUpperCase()}
+                    </Avatar>
                     <div className="flex flex-col">
                         <span className="font-bold inline-block max-w-[60px] min-[400px]:max-w-[100px] min-[500px]:max-w-[140px] sm:max-w-[160px]
                     whitespace-nowrap overflow-hidden text-ellipsis">{post?.name}</span>
