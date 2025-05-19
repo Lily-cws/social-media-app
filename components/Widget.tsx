@@ -24,7 +24,7 @@ export default function Widget() {
         <h1 className="text-xl font-bold mb-2">What&apos;s Happening?</h1>
 
         {/* --Trending 1 */}
-        <div className="flex flex-col py-3 text-sm cursor-pointer">
+        <div className="flex flex-col py-3 text-sm cursor-not-allowed">
           <div className="flex justify-between text-mytextGray text-[13px]">
             <span>Trending in Sweden</span>
             <EllipsisHorizontalIcon className="w-[20px]" />
@@ -34,7 +34,7 @@ export default function Widget() {
           <span className="text-mytextGray text-xs">240k Bumbles</span>
         </div>
         {/* --Trending 2 */}
-        <div className="flex flex-col py-3 text-sm cursor-pointer">
+        <div className="flex flex-col py-3 text-sm cursor-not-allowed">
           <div className="flex justify-between text-mytextGray text-[13px]">
             <span>Trending in Sweden</span>
             <EllipsisHorizontalIcon className="w-[20px]" />
@@ -44,7 +44,7 @@ export default function Widget() {
           <span className="text-mytextGray text-xs">200k Bumbles</span>
         </div>
         {/* --Trending 3 */}
-        <div className="flex flex-col py-3 text-sm cursor-pointer">
+        <div className="flex flex-col py-3 text-sm cursor-not-allowed">
           <div className="flex justify-between text-mytextGray text-[13px]">
             <span>Trending in Sweden</span>
             <EllipsisHorizontalIcon className="w-[20px]" />
@@ -54,7 +54,7 @@ export default function Widget() {
           <span className="text-mytextGray text-xs">14k Bumbles</span>
         </div>
         {/* --Trending 4 */}
-        <div className="flex flex-col py-3 text-sm cursor-pointer">
+        <div className="flex flex-col py-3 text-sm cursor-not-allowed">
           <div className="flex justify-between text-mytextGray text-[13px]">
             <span>Trending in Sweden</span>
             <EllipsisHorizontalIcon className="w-[20px]" />
@@ -73,7 +73,7 @@ export default function Widget() {
         <div className="flex justify-between items-center text-sm py-3">
           <div className="flex items-center space-x-3">
             <Image
-              src={'/assets/Profile_Pic.png'}
+              src={'/assets/LexFridman.jpg'}
               width={56}
               height={56}
               alt="Profile Pic"
@@ -81,19 +81,19 @@ export default function Widget() {
             />
 
             <div className="flex flex-col text-sm">
-              <span className="font-bold">Elom Musk</span>
-              <span>@elonMusk</span>
+              <span className="font-bold">Lex Fridman</span>
+              <span>@lexfridman</span>
             </div>
           </div>
           
-          <button className="bg-[#0F1419] text-white h-[40px] w-[72px] rounded-full text-sm">Follow</button>
+          <button className="bg-[#0F1419] text-white h-[40px] w-[72px] rounded-full text-sm cursor-not-allowed">Follow</button>
         </div>
 
         {/* Who to Follow 2 */}
         <div className="flex justify-between items-center text-sm py-3">
           <div className="flex items-center space-x-3">
             <Image
-              src={'/assets/Profile_Pic.png'}
+              src={'/assets/MichaelP.jpg'}
               width={56}
               height={56}
               alt="Profile Pic"
@@ -101,19 +101,19 @@ export default function Widget() {
             />
 
             <div className="flex flex-col text-sm">
-              <span className="font-bold">Elom Musk</span>
-              <span>@elonMusk</span>
+              <span className="font-bold">Michael B. P.</span>
+              <span>@ThePrimeTime</span>
             </div>
           </div>
           
-          <button className="bg-[#0F1419] text-white h-[40px] w-[72px] rounded-full text-sm">Follow</button>
+          <button className="bg-[#0F1419] text-white h-[40px] w-[72px] rounded-full text-sm cursor-not-allowed">Follow</button>
         </div>
 
         {/* Who to Follow 3 */}
         <div className="flex justify-between items-center text-sm py-3">
           <div className="flex items-center space-x-3">
             <Image
-              src={'/assets/Profile_Pic.png'}
+              src={'/assets/Sonny.jpg'}
               width={56}
               height={56}
               alt="Profile Pic"
@@ -121,12 +121,12 @@ export default function Widget() {
             />
 
             <div className="flex flex-col text-sm">
-              <span className="font-bold">Elom Musk</span>
-              <span>@elonMusk</span>
+              <span className="font-bold">Sonny Sangha</span>
+              <span>@papareact</span>
             </div>
           </div>
           
-          <button className="bg-[#0F1419] text-white h-[40px] w-[72px] rounded-full text-sm">Follow</button>
+          <button className="bg-[#0F1419] text-white h-[40px] w-[72px] rounded-full text-sm cursor-not-allowed">Follow</button>
         </div>
 
 

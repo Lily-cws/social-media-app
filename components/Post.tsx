@@ -51,7 +51,7 @@ export default function Post({data, id}:PostProps) {
 
 
   return (
-    <div className="border-b border-gray-100">
+    <div className="border-b border-gray-100  hover:bg-gray-100">
         <Link href={'/' + id}>
             <PostHeader
                 username={data.username}

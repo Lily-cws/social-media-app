@@ -91,7 +91,7 @@ export default function PostInput({isModalOpen}:PostInputProps) {
       <div className="w-full">
         <textarea className="w-full resize-none outline-none
         min-h-[50px] text-lg"
-        placeholder={isModalOpen? "Send your reply":"What's is happening!?"}
+        placeholder={isModalOpen? "Send your reply":"What is happening!?"}
         onChange={(event)=>setText(event.target.value)}
         value={text}
         />
